@@ -1,0 +1,29 @@
+
+#miejsceZdjec{
+    height: 300px;
+    width: 400px;
+    border: 1px solid black;
+    position: relative;
+
+}
+
+#miejsceZdjec img{
+    height: 300px;
+    width: 400px;
+    position: absolute;
+
+}
+
+.imageToRotate{
+    display: none;
+
+}
+
+.current{
+    display: block;
+
+}
+
+
+
+

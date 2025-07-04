@@ -1,0 +1,37 @@
+
+.textSection{
+    width: 400px;
+    background-color: rgb(178, 188, 199);
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+.moreText{
+    cursor: pointer;
+    color: blue;
+}
+
+.lessText{
+    cursor: pointer;
+    color: red;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

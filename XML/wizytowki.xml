@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<wizytowki>
+    <wizytowka id="1">
+        <imie> Adam </imie>
+        <nazwisko> Kowalski </nazwisko>
+        <telefon typ="praca"> 546 781 999 </telefon>
+        <telefon typ="komorka"> 000 233 000 </telefon>
+        <email> mojemail@mail.com </email>
+        <website> https://stronaqwertyuio.pl </website>
+    </wizytowka>
+
+    <wizytowka id="2">
+        <imie> Jan </imie>
+        <nazwisko> Piotrowski </nazwisko>
+        <telefon typ="praca"> 781 546 888 </telefon>
+        <telefon typ="komorka"> 233 233 233 </telefon>
+        <email> janemail@mail.com </email>
+        <website> https://janPiotrowskiWeb.pl </website>
+    </wizytowka>
+</wizytowki>
+
+
+

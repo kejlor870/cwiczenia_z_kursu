@@ -27,6 +27,14 @@
 
 }
 
+.podpowiedzihover{
+    width: 144px;
+    background-color: teal;
+    border-bottom: 1px solid black;
+    padding: 5px;
+
+}
+
 .podpowiedzi:hover{
     background-color: teal;
     cursor: pointer;

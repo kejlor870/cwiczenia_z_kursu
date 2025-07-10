@@ -1,5 +1,8 @@
 window.onload = init;
 var XMLMainElement = null;
+var licznik = 0;
+var wybrany = 0;
+var tmpCode;
 
 function init(){
     // Pobranie offsetow (pozycji pola input)
@@ -11,8 +14,12 @@ function init(){
     document.getElementById("suggestBoxField").style.left = wojewodztwoOffsetLeft + "px";
     document.getElementById("suggestBoxField").style.top = (wojewodztwoOffsetTop + wojewodztwoOffsetHeight) + "px";
 
-    // Funkcja pokazujaca podpowiedzi
-    document.getElementById("wojewodztwo").onkeyup = showBox;
+    // Po wpisaniu w input
+    document.getElementById("wojewodztwo").onkeyup = function(evt){
+        showBox(evt); // Funkcja pokazujaca podpowiedzi
+        checkKey(evt); // Wybieranie z podpowiedzi za pomoca strzalek
+
+    }
 
     // Pobranie z pliku XML
     suggestBox();
@@ -69,7 +76,14 @@ function suggestBox(){
 }
 
 // Funkcja odpowiadajaca za podpowiedzi
-function showBox(){
+function showBox(evt){
+    var evt = (evt) ? evt : window.event;
+
+    if(evt.keyCode != 13 && evt.keyCode != 38 && evt.keyCode != 40 && evt.keyCode != 8){
+        licznik = 0;
+        wybrany = 0;
+    }
+
     if(XMLMainElement != null){
         document.getElementById("suggestBoxField").style.visibility = "hidden";
         document.getElementById("suggestBoxField").innerHTML = "";
@@ -115,6 +129,54 @@ function showBox(){
 
 }
 
+// Funckja obslugujaca wybor za pomoca klawiszy
+function checkKey(evt){
+    var evt = (evt) ? evt : window.event;
+
+    var iloscPodpowiedzi = document.getElementById("suggestBoxField").childNodes.length;
+
+    if(licznik == 0){
+        licznik = iloscPodpowiedzi;
+        wybrany = 0;
+
+    }
+
+    // Obsluga poszczegolnych klawiszy
+    if(evt.keyCode == 40){ // strzalka w dol
+        if(tmpCode == "gora"){
+            licznik++;
+        }
+        document.getElementById("suggestBoxField").childNodes[licznik%iloscPodpowiedzi].className = "podpowiedzihover";
+
+        wybrany = licznik % iloscPodpowiedzi;
+        
+        licznik++;
+
+        tmpCode = "dol";
+
+    }else if(evt.keyCode == 38){ // strzalka w gore
+        if(tmpCode == "dol"){
+            licznik--;
+        }
+        licznik--;
+
+        wybrany = licznik % iloscPodpowiedzi;
+
+        document.getElementById("suggestBoxField").childNodes[licznik%iloscPodpowiedzi].className = "podpowiedzihover";
+
+        tmpCode = "gora";
+
+    }else if(evt.keyCode == 13){ // enter
+        document.getElementById("wojewodztwo").value = document.getElementById("suggestBoxField").childNodes[wybrany].firstChild.nodeValue;
+
+        tmpCode = "enter";
+    }else if(keyCode == 9){ // backspace
+        licznik = 0;
+        wybrany = 0;
+        tmpCode = "backspace"; 
+
+    }
+}
 
 
 

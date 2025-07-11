@@ -107,7 +107,8 @@ function showBox(evt){
                     // Funkcja uzupelniajaca input po nacisnieciu podpowiedzi
                     tmpDiv.onclick = function(){
                         document.getElementById("wojewodztwo").value = this.innerHTML;
-                        suggestBoxField.style.visibility = "hidden";
+
+                        wybraniePodpowiedzi(this.innerHTML);
 
                     }
 
@@ -169,6 +170,10 @@ function checkKey(evt){
     }else if(evt.keyCode == 13){ // enter
         document.getElementById("wojewodztwo").value = document.getElementById("suggestBoxField").childNodes[wybrany].firstChild.nodeValue;
 
+        wybraniePodpowiedzi(document.getElementById("suggestBoxField").childNodes[wybrany].firstChild.nodeValue);
+        licznik = 0;
+        wybrany = 0;
+
         tmpCode = "enter";
     }else if(keyCode == 9){ // backspace
         licznik = 0;
@@ -178,5 +183,76 @@ function checkKey(evt){
     }
 }
 
+// Wyswietlanie informacj po wpisaniu/wybraniu wojewodztwa
+function wybraniePodpowiedzi(wybranyRekord){
+    document.getElementById("tekst").innerHTML = "";
+    document.getElementById("suggestBoxField").style.visibility = "hidden";
+    var wybraneWojewodztwo = null;
+
+    // Przeszukanie po kazdym elemencie XML 
+    for(var i=0; i < XMLMainElement.getElementsByTagName("Województwo").length; i++){
+        // Jesli element Nazwa jest rowny wybranyRekord
+        if(XMLMainElement.getElementsByTagName("Nazwa")[i].firstChild.nodeValue == wybranyRekord){
+            // Przypisanie rodzica Node'a
+            wybraneWojewodztwo = XMLMainElement.getElementsByTagName("Nazwa")[i].parentNode;
+
+            break;
+        }
+
+    }
+
+    // tworzenie tabeli
+    var table = document.createElement("table");
+    var tablebody = document.createElement("tbody");
+
+    // przejscie po ilosci rzeczy w wybranym wojewodztwie
+    for(var i=0; i < wybraneWojewodztwo.childNodes.length; i++){
+        // jesli jest object Element (1) a nie tekst (3)
+        if(wybraneWojewodztwo.childNodes[i].nodeType == 1){ 
+            var row = document.createElement("tr");
+            // Pierwsza kolumna
+            var cell = document.createElement("td");
+            
+            var header = document.createTextNode(wybraneWojewodztwo.childNodes[i].nodeName+": ");
+            cell.className = "cellHeader";
+
+            cell.appendChild(header);
+            row.appendChild(cell);
+            
+            // Druga kolumna
+            cell = document.createElement("td");
+            var content = document.createTextNode(wybraneWojewodztwo.childNodes[i].firstChild.nodeValue);
+            cell.appendChild(content);
+            row.appendChild(cell);
+
+            tablebody.appendChild(row);
+        }
+        
+    }
+
+    table.appendChild(tablebody);
+
+    document.getElementById("tekst").appendChild(table);
+
+    /* Tak to bedzie wygladac: 
+     <table>
+        <tbody>
+            <tr>
+                <td> Nazwa: </td>
+                <td> Lubuskie </td>
+            </tr>
+            <tr>
+                <td> Powierzchnia: </td>
+                <td> 1 290 321 </td>
+            </tr>
+            <tr>
+                <td> Ludnosc: </td>
+                <td> 1 000 000</td>
+            </tr>
+        </tbody>
+     </table>
+    */
+
+}
 
 

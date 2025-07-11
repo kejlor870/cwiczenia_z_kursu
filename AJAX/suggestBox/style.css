@@ -45,5 +45,18 @@
     background-color: red;
 }
 
+#tekst{
+    margin: 10px;
+}
 
+#tekst table, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
 
+}
+
+.cellHeader{
+    font-weight: bold;
+
+}

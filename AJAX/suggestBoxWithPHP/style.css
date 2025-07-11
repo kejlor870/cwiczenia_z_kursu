@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#formWojewodztwo{
+    margin: 20px;
+}
+
+#wojewodztwo{
+    padding: 1px 0px;
+    width: 150px;
+
+}
+
+#suggestBoxField{
+    position: absolute;
+    visibility: hidden;
+}
+
+.podpowiedzi{
+    width: 144px;
+    background-color: gray;
+    border-bottom: 1px solid black;
+    padding: 5px;
+
+}
+
+.podpowiedzihover{
+    width: 144px;
+    background-color: teal;
+    border-bottom: 1px solid black;
+    padding: 5px;
+
+}
+
+.podpowiedzi:hover{
+    background-color: teal;
+    cursor: pointer;
+
+}
+
+.error{
+    background-color: red;
+}
+
+#tekst{
+    margin: 10px;
+}
+
+#tekst table, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+
+}
+
+.cellHeader{
+    font-weight: bold;
+
+}

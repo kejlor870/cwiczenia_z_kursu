@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja filtrujaca</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="ajax.js"></script>
+</head>
+<body>
+    <form id="formWojewodztwo" onsubmit="return false;" onkeyup="showHint()">
+        <fieldset id="filtrWojewodztw">
+            <legend>Filtr</legend>
+            <p>Powierzchnia min: 
+                <input type="text" class="filtry" id="powierzchniaMIN">
+            </p>
+            <p>Powierzchnia max: 
+                <input type="text" class="filtry" id="powierzchniaMAX">
+            </p>
+            <p>Ludność min: 
+                <input type="text" class="filtry" id="ludnoscMIN">
+            </p>
+            <p>Ludność max: 
+                <input type="text" class="filtry" id="ludnoscMAX">
+            </p>
+        </fieldset>
+    </form>
+
+    <div id="tekst">
+
+    </div>
+
+</body>
+</html>

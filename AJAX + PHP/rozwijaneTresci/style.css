@@ -1,0 +1,44 @@
+
+
+#towary{
+    margin: 10px;
+
+}
+
+.towar{
+    border: 1px solid black;
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #d6fffd;
+
+}
+
+.naglowek{
+    font-weight: bold;
+    margin-left: 2em;
+}
+
+.tresc_rozwijana{
+    margin: 10px 10px 0 20px;
+    display: none;
+}
+
+.rozwin{
+    cursor: pointer;
+}
+
+
+table, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+
+td{
+    padding: 10px;
+}
+
+.etykieta{
+    font-weight: bold;
+}

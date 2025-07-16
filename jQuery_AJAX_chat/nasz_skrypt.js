@@ -2,6 +2,24 @@ var time = 0;
 
 $("document").ready(
     function(evt){
+        $("#shoutbox").submit(
+            function(){
+                $.post("odbierz_dane.php", {
+                    "text": $("#text").val(),
+                    "nick": $("#nick").val(),
+                    "time": time,
+                    "action": "post"
+
+                }, function(daneXML){
+                    addMessage(daneXML);
+
+                });
+
+                $("#text").val("");
+                return false;
+            }
+        );
+
 		updateMessage();
 	}
 );

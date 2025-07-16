@@ -1,8 +1,6 @@
 <?php 
-    // echo $_POST["cos"];
-
-    header("Content-type: text/xml");
-    header("Cache-Control: no-cache");
+    // header("Content-type: text/xml");
+    // header("Cache-Control: no-cache");
 
     $host = "localhost";
     $db = "test";
@@ -18,8 +16,23 @@
     $conn->set_charset("utf8");
 
     $time = $_POST["time"]; // odebrany czas z nasz_skrypt.js
+    $nick = $_POST["nick"];
+    $text = $_POST["text"];
+    $action = $_POST["action"];
 
-    $query = "SELECT nick, tresc, czas FROM wiadomosci WHERE czas > " . $time;
+    // Dodawanie nowej wiadomosci do bazy danych
+    if($action == "post"){
+        $addQuery = "INSERT INTO wiadomosci (nick, tresc, czas) VALUES ('$nick', '$text', ". time() .")";
+        mysqli_query($conn, $addQuery);
+
+        $currentId = mysqli_insert_id($conn) - 5;
+        $clearQuery = "DELETE FROM wiadomosci WHERE id <= " . $currentId;
+        mysqli_query($conn, $clearQuery);
+    }
+
+
+    // Pobieranie wiadomosci z bazy danych
+    $query = "SELECT nick, tresc, czas FROM wiadomosci WHERE czas > " . $time . " ORDER BY id";
     $results = mysqli_query($conn, $query);
 
     // Jesli nie zmienila sie ilosc postow

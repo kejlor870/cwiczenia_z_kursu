@@ -54,7 +54,7 @@ function addMessage(daneXML){
             var tresc = $("tresc", this);
             var czas = $("czas", this);
 
-            $("#messages").prepend("["+czas.text()+"] ["+nick.text()+"]<br>"+tresc.text()+"<br>");
+            $("#messages").prepend("["+czas.text()+"]<br>[<span class='nickBolder'>"+nick.text()+"</span>]:<br>&nbsp;&nbsp;"+tresc.text()+"<br><hr>");
 
         }
     );

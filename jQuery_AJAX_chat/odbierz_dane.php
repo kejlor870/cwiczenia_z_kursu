@@ -52,7 +52,7 @@
         echo "<wiadomosc>";
         echo "<nick>".$row["nick"]."</nick>";
         echo "<tresc>".$row["tresc"]."</tresc>";
-        echo "<czas>".date("d-m-y H:i:s", $row["czas"])."</czas>";
+        echo "<czas>".date("d-m-Y H:i:s", $row["czas"])."</czas>";
         echo "</wiadomosc>";
     }
 

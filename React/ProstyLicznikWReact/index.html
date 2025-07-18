@@ -15,32 +15,15 @@
         function App(){
             const [counter, setCounter] = React.useState(0);
 
-            // Zmniejszanie liczby klikniec
-            function decreaseValue(){
-                setCounter(counter - 1);
-
-            }
-
-            // Zwiekszanie liczby klikniec
-            function increaseValue(){
-                setCounter(counter + 1);
-
-            }
-
-            function resetValue(){
-                setCounter(0); // ustawia wartosc counter w ()
-
-            }
-
             return(
                 <>  
                     <h1> Prosty licznik w React! </h1>
                     <h2> Liczba kliknięć: {counter} </h2>
-                    <button type="button" onClick={decreaseValue}> [ - ] </button>
+                    <button type="button" onClick={() => setCounter(counter - 1)}> [ - ] </button>
                     &nbsp;&nbsp;&nbsp;
-                    <button type="button" onClick={increaseValue}> [ + ] </button>
+                    <button type="button" onClick={() => setCounter(counter + 1)}> [ + ] </button>
                     <br /><br />
-                    <button type="button" onClick={resetValue}> Resetuj </button>
+                    <button type="button" onClick={() => setCounter(0)}> Resetuj </button>
 
                 </>
             );

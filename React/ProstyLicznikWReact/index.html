@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>        
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.25.3/babel.min.js"></script>
+    <title>Simple Counter Application</title>
+</head>
+<body> 
+    <div id="root"></div>
+ 
+    <script type="text/babel">
+        function App(){
+            const [counter, setCounter] = React.useState(0);
+
+            // Zmniejszanie liczby klikniec
+            function decreaseValue(){
+                setCounter(counter - 1);
+
+            }
+
+            // Zwiekszanie liczby klikniec
+            function increaseValue(){
+                setCounter(counter + 1);
+
+            }
+
+            function resetValue(){
+                setCounter(0); // ustawia wartosc counter w ()
+
+            }
+
+            return(
+                <>  
+                    <h1> Prosty licznik w React! </h1>
+                    <h2> Liczba kliknięć: {counter} </h2>
+                    <button type="button" onClick={decreaseValue}> [ - ] </button>
+                    &nbsp;&nbsp;&nbsp;
+                    <button type="button" onClick={increaseValue}> [ + ] </button>
+                    <br /><br />
+                    <button type="button" onClick={resetValue}> Resetuj </button>
+
+                </>
+            );
+
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<App />);
+    </script>
+</body>
+</html>

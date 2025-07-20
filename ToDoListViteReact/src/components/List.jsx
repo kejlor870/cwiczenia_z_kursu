@@ -4,6 +4,7 @@ function List(){
     const [tasks, setTasks] = useState([]);
     const [input, setInput] = useState('');
 
+    // Dodawanie zadania do tablicy
     function addTask(e){
         e.preventDefault();
 
@@ -13,6 +14,13 @@ function List(){
 
         setTasks([...tasks, input]); // dodawanie nowego zadania do tablicy z poprzednimi zadaniami
         setInput(""); // wyczyszczenie inputa
+    }
+
+
+    // Usuwanie zadania z tablicy
+    function deleteTask(index){
+        setTasks(tasks.filter((tresc, taskIndex) => taskIndex !== index)); // filter - filtruje tablice i sprawdza dla kazdego elementu czy spelnia warunek po =>
+
     }
 
     return(
@@ -30,10 +38,15 @@ function List(){
                 <button type="submit"> Zapisz </button>
             </form>
 
-            <ul>
+            <ul id="taskDisplay">
                 {/* Wypisanie z tablicy wartosci */}
                 {tasks.map((task, index) => (
-                    <li key={index}>{task}</li>
+                    <li key={index}>
+                        <div className="liTask"> {/* div display: flex */}
+                            <p>{task}</p>
+                            <button type="button" className="btnDeleteTask" onClick={() => deleteTask(index)}>Usuń</button>
+                        </div>
+                    </li>
                 ))}
             </ul>
         </div>

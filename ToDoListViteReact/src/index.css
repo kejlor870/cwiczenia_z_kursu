@@ -63,6 +63,18 @@ input{
 
 li{
   text-align: left;
+  padding: 1rem 0 1rem 0;
+  border-bottom: 1px solid gray;
+}
+
+.liTask{
+  display: flex;
+  justify-content: space-between;
+
+}
+.liTask button{
+  max-height: 50px;
+
 }
 
 @media (prefers-color-scheme: light) {

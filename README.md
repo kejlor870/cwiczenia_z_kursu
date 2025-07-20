@@ -26,6 +26,10 @@ Rozwijane treści pobierane dynamicznie z bazy danych za pomocą AJAX i PHP.
 - **ClickerCounter** — prosty licznik kliknięć zbudowany w React + Vite.
 - **ToDoListViteReact** — aplikacja ToDo List stworzona z użyciem Reacta i Vite, zawierająca dynamiczne dodawanie zadań i aktualizowany `README.md`.
 
+### 📁 ToDoListViteReact
+
+Prosta i szybka aplikacja ToDo stworzona w React z Vite, umożliwiająca zarządzanie listą zadań.
+
 ### 📁 XML
 
 Ćwiczenia dotyczące struktury i analizy danych w formacie XML.

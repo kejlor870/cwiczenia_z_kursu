@@ -1,0 +1,38 @@
+
+nav{
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li{
+        display: block;
+        float: left;
+
+        li{
+            display: none;
+            float: none;
+
+            a:hover{
+                background-color: blue;
+            }
+        }
+
+        &:hover li{ // & - odwolanie do elementu wyzej
+            display: block;
+        }
+    }
+    a{
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        background-color: green;
+        color: orange;
+
+        &:hover{
+            color: white;
+        }
+    }
+
+}
+

@@ -1,0 +1,31 @@
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: block;
+  float: left;
+}
+nav li li {
+  display: none;
+  float: none;
+}
+nav li li a:hover {
+  background-color: blue;
+}
+nav li:hover li {
+  display: block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  background-color: green;
+  color: orange;
+}
+nav a:hover {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

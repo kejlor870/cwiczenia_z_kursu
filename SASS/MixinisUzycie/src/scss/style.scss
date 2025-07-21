@@ -1,0 +1,11 @@
+@use "mixinis"; // _mixinis.scss
+
+.akapit{
+    width: 200px;
+    height: 50px;
+    background-color: aquamarine;
+
+    @include mixinis.textOverflow();
+    @include mixinis.linear-gradient(to top, #ff7e5f, #ffdcc1);
+
+}

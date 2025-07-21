@@ -1,0 +1,13 @@
+.akapit {
+  width: 200px;
+  height: 50px;
+  background-color: aquamarine;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-image: linear-gradient(to top, #ff7e5f, #ffdcc1);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=style.css.map */

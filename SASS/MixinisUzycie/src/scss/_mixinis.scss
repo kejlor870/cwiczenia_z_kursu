@@ -1,0 +1,12 @@
+@mixin textOverflow() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+@mixin linear-gradient($direction: to right, $colors...) {
+  background-image: linear-gradient($direction, $colors...);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,3 +1,8 @@
+# Responsive Web Design w SASS
+- automatyczne generowanie kodu dla ustawienia obrazkow w row z marginem tak aby byly rozciagniete na cala przestrzen
+- w zaleznosci od szerokosci okna zmiana wyswietlania obrazkow
+- interpolacja stringow w SASS
+
 # Screenshots:
 
 ## 1024px:

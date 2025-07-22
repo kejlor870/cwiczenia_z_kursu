@@ -1,0 +1,21 @@
+
+@mixin linear-gradient($direction: to right, $colors...) {
+  background-image: linear-gradient($direction, $colors...);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin numberOfImageInRow($numberOfImages, $imageMargin){
+  width: calc((100% - (($numberOfImages - 1)*$imageMargin))/ $numberOfImages);
+  margin-right: $imageMargin;
+  margin-bottom: $imageMargin;
+
+  &:nth-child(n){
+    margin-right: $imageMargin;
+  }
+
+  &:nth-child(#{$numberOfImages}n){ // interpolacja stringu
+    margin-right: 0;
+  }
+
+}

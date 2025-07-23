@@ -6,9 +6,9 @@ Repozytorium zawiera zestaw ćwiczeń realizowanych podczas kursu web developmen
 
 Celem repozytorium jest dokumentacja postępów w nauce oraz prezentacja umiejętności zdobytych w trakcie kursu. Każdy folder zawiera osobny projekt lub zestaw ćwiczeń skupiających się na konkretnym zagadnieniu technicznym.
 
-## 📁 Struktura katalogów
+## 📁 Struktura katalogów:
 
-### 📁 AJAX
+### 📁 [AJAX](AJAX)
 
 Zestaw ćwiczeń pokazujących wykorzystanie technologii AJAX:
 
@@ -17,24 +17,43 @@ Zestaw ćwiczeń pokazujących wykorzystanie technologii AJAX:
 - **suggestBox** — dynamiczne podpowiadanie (suggest box) z wyświetlaniem wyników w tabeli.
 - **suggestBoxWithPHP** — kompletna wersja suggest box z integracją PHP i MySQL.
 
-### 📁 AJAX + PHP/rozwijaneTresci
+<hr>
+
+### 📁 [AJAX + PHP/rozwijaneTresci](AJAX%20%2B%20PHP)
 
 Rozwijane treści pobierane dynamicznie z bazy danych za pomocą AJAX i PHP.
 
-### 📁 React
+<hr>
+
+### 📁 [React](React)
 
 - **ClickerCounter** — prosty licznik kliknięć zbudowany w React + Vite.
 - **ToDoListViteReact** — aplikacja ToDo List stworzona z użyciem Reacta i Vite, zawierająca dynamiczne dodawanie zadań i aktualizowany `README.md`.
+  
+<hr>
 
-### 📁 ToDoListViteReact
+### 📁 [SASS](SASS)
+
+Ćwiczenia pokazujące zastosowanie preprocesora CSS – SASS:
+- **MenuRozwijaneSASS** — stylowane menu rozwijane z użyciem zmiennych i mixinów SASS.
+- **MixinsUzycie** — praktyczne przykłady wykorzystania mixinów dla reużywalnych stylów.
+- **RWDwSASS** — responsywne podejście do projektowania przy użyciu media queries w SASS.
+
+<hr>
+
+### 📁 [ToDoListViteReact](ToDoListViteReact)
 
 Prosta i szybka aplikacja ToDo stworzona w React z Vite, umożliwiająca zarządzanie listą zadań.
 
-### 📁 XML
+<hr>
+
+### 📁 [XML](XML)
 
 Ćwiczenia dotyczące struktury i analizy danych w formacie XML.
 
-### 📁 jQuery
+<hr>
+
+### 📁 [jQuery](jQuery)
 
 - **Dynamiczne_podpowiedzi** — podpowiedzi tekstowe generowane w czasie rzeczywistym.
 - **Dynamicznie_generowane_menu** — menu budowane dynamicznie na podstawie danych wejściowych.
@@ -42,13 +61,17 @@ Prosta i szybka aplikacja ToDo stworzona w React z Vite, umożliwiająca zarząd
 - **Rozwijane_nagłówki** — składane nagłówki, idealne do tworzenia sekcji FAQ.
 - **Truncator-wlasny_plugin** — własny plugin jQuery skracający tekst z opcją "czytaj więcej", z osobnym plikiem `README.md`.
 
-### 📁 jQuery_AJAX_chat
+<hr>
+
+### 📁 [jQuery_AJAX_chat](jQuery_AJAX_chat)
 
 Prosty system czatu zbudowany na bazie jQuery i AJAX, z niedawno poprawionym interfejsem użytkownika.
 
+<hr>
+
 ## 🛠 Technologie użyte
 
-- **Front-end**: HTML5, CSS3, JavaScript, jQuery, React
+- **Front-end**: HTML5, CSS3, JavaScript, jQuery, React, SASS
 - **Back-end**: PHP, MySQL
 - **Inne**: AJAX, XML, Vite
 
